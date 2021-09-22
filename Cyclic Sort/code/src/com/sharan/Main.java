@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // Cyclic sort will only work on continuous array which start from 1 up to n or from 0 to n;
-        int[] arr = {4,3,2,7,8,2,3,1};
+        int[] arr = {3,4,-1,1};
         System.out.println("Original Array = " + Arrays.toString(arr));
         System.out.println("Sorted Array = " + Arrays.toString(cyclicSort(arr)));
     }
@@ -20,7 +20,7 @@ public class Main {
                 i++;
             }
             else swap(arr,i,correctIndex);
-        }
+         }
         return arr;
     }
 
