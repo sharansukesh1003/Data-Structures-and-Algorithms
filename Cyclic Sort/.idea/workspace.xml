@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38326acf-ffc3-432a-8840-e09ef269ba27" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Insertion Sort/code/out/production/code/com/sharan/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Insertion Sort/code/out/production/code/com/sharan/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Insertion Sort/code/src/com/sharan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Insertion Sort/code/src/com/sharan/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1yUaG1U4KVKCjb0QPVidA1t6ZKb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38326acf-ffc3-432a-8840-e09ef269ba27" name="Changes" comment="" />
+      <created>1632308523409</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632308523409</updated>
+    </task>
+    <servers />
+  </component>
+</project>

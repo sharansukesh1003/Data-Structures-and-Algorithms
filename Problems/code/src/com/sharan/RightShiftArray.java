@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RightShiftArray {
     public static void main(String[] args) {
-        int[] arr = {0,5,6,7,8};
+        int[] arr = {0,10,6,7,8};
         System.out.println("Original array = " + Arrays.toString(arr));
         int shift = 1;
         System.out.println("Shifted array = " + Arrays.toString(shiftTheArray(arr, shift)));

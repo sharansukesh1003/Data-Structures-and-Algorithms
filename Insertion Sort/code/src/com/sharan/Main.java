@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-	int[] arr = {1,-5,25,-3,0};
+	int[] arr = {5,3,4,1,2};
         System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(insertionSort(arr)));
     }
@@ -24,9 +24,9 @@ public class Main {
         }
         return arr;
     }
-    static void swap(int[] arr, int first, int second){
-        int temp = arr[second];
-        arr[second] = arr[first];
-        arr[first] = temp;
+    static void swap(int[] arr, int c, int b){
+        int a = arr[b];
+        arr[b] = arr[c];
+        arr[c] = a;
     }
 }

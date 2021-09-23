@@ -15,7 +15,7 @@ public class SearchIn2DArray {
     }
 
     static boolean searchMatrix(int[][] matrix, int target) {
-        int[] arr = searchIn2DArray(matrix, target);
+        int[]arr = searchIn2DArray(matrix, target);
         return arr[1] != -1;
     }
 
