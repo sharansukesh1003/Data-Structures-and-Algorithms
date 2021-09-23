@@ -37,3 +37,4 @@ public class GuessTheNumber {
         return num > n? 1: -1;
     }
 }
+
