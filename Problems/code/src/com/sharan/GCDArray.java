@@ -6,6 +6,7 @@ public class GCDArray {
         int[] arr ={2,5,6,9,10};
         System.out.println(findGCD(arr));
     }
+    // approach just check the smallest number and largest number GCD.(Slower approach).
     public static int findGCD(int[] nums) {
         int defaultValue = 1;
         for(int i = 0; i < nums.length; i++){
@@ -23,5 +24,26 @@ public class GCDArray {
             }
         }
         return defaultValue;
+    }
+    // 100% Faster Solution.
+    public static int findGCDFastest(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0, numsLength = nums.length; i < numsLength; i++) {
+            int num = nums[i];
+            if (num < min) {
+                min = num;
+            }
+            if (num > max) {
+                max = num;
+            }
+        }
+        return gcd(min,max);
+    }
+    public static int gcd(int a, int b){
+        if(a == 0){
+            return b;
+        }
+        return gcd(b % a, a);
     }
 }
