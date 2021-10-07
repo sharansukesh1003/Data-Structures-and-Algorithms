@@ -29,6 +29,7 @@ public class GCDArray {
     public static int findGCDFastest(int[] nums) {
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
+        //  Find the minimum and maximum in the array.
         for (int i = 0, numsLength = nums.length; i < numsLength; i++) {
             int num = nums[i];
             if (num < min) {
@@ -40,6 +41,7 @@ public class GCDArray {
         }
         return gcd(min,max);
     }
+    // GCD using Euclidean Algorithm.
     public static int gcd(int a, int b){
         if(a == 0){
             return b;
