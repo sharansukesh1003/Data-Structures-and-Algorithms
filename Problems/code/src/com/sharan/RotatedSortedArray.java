@@ -4,7 +4,11 @@ package com.sharan;
 // recursive binary search.
 
 class RotatedSortedArray {
-    public int findMin(int[] arr) {
+    public static void main(String[] args) {
+        int[] arr = {4,5,6,7,0,1,2};
+        System.out.println(findMin(arr));
+    }
+    public static int findMin(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
         int target = arr[0];
@@ -24,5 +28,6 @@ class RotatedSortedArray {
             return recursiveBinarySearch(arr,mid,end,arr[mid]);
         }
         return recursiveBinarySearch(arr,start,mid,arr[mid]);
+
     }
 }
