@@ -18,7 +18,7 @@ public class Main {
                 if (arr[j-1] > arr[j]){
                     swap(arr,j-1,j);
                 }
-                // If no swap takes place that means elements are sorted, therefore break.
+                // If no swap takes place that means hte previous elements are sorted, therefore break.
                 else break;
             }
         }

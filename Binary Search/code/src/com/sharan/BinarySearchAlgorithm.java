@@ -33,5 +33,4 @@ public class BinarySearchAlgorithm {
         }
         return -1;
     }
-
 }

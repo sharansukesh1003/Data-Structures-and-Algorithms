@@ -27,7 +27,7 @@ public class Main {
                     // This means the element is swapped.
                 }
             }
-            if (swap == false) {
+            if (swap) {
                 // If the previous iteration didn't swap any elements that means the array,
                 // is sorted so break the loop.
                 break;
