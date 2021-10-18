@@ -1,34 +1,48 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/
 package com.sharan;
-
-import java.util.ArrayList;
-import java.util.Collections;
-
+// 60.95% Faster 90.89% Less memory (Merge Sort)
 public class MedianOf2SortedArrays {
     public static void main(String[] args) {
         int[] nums1 = {1,2};
         int[] nums2 = {3,4};
         System.out.println(findMedianSortedArrays(nums1,nums2));
     }
-    static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        double sum = 0;
-        ArrayList<Integer> list = new ArrayList<Integer>(nums1.length + nums2.length);
-        for(int i=0; i < nums1.length; i++){
-            list.add(nums1[i]);
-        }
-        for(int j=0; j < nums2.length; j++){
-            list.add(nums2[j]);
-        }
-        for(int k=0; k < list.size(); k++){
-            sum+= list.get(k);
-        }
-        Collections.sort(list);
-        double middle = list.get(list.size() / 2);
-        if (list.size() % 2 == 0){
-            double a =  list.get(list.size() / 2 );
-            double b =  list.get(list.size() / 2 - 1);
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int[] ans;
+        ans = merge(nums1,nums2);
+        double middle;
+        if (ans.length % 2 == 0){
+            double a =  ans[ans.length / 2 ];
+            double b =  ans[ans.length / 2 - 1];
             return middle = (a + b) / 2;
         }
-        return middle;
+        return middle = ans[ans.length / 2];
+    }
+    private static int[] merge(int[] first, int[] second) {
+        int[] mix = new int[first.length + second.length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < first.length && j < second.length) {
+            if (first[i] < second[j]) {
+                mix[k] = first[i];
+                i++;
+            } else {
+                mix[k] = second[j];
+                j++;
+            }
+            k++;
+        }
+        while (i < first.length) {
+            mix[k] = first[i];
+            i++;
+            k++;
+        }
+        while (j < second.length) {
+            mix[k] = second[j];
+            j++;
+            k++;
+        }
+        return mix;
     }
 }
