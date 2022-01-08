@@ -1,0 +1,84 @@
+// Infosys questions
+package com.sharan;
+import java.util.Arrays;
+
+public class InfosysQuestions {
+    public static void main(String[] args) {
+//        System.out.println(characterRepeat("statistics"));
+//        System.out.println(shiftCards(new String[] {"red", "blue", "green", "yellow"}, 1, "yellow"));
+        int[] a = {8, 10};
+        int[] b = {3, 1, 8, 7, 4, 2, 5, 2};
+        System.out.println(processorTime(a, b));
+    }
+    // 1
+    public static int characterRepeat(String s){
+        for (int i = 0; i < s.length(); i++) {
+            int count = 1;
+            for (int j = 0; j < s.length(); j++) {
+                if (i != j) {
+                    if (s.charAt(i) == s.charAt(j)) {
+                        count++;
+                    }
+                }
+            }
+            if (count == 1) return i+1;
+        }
+        return -1;
+    }
+    // 2
+    public static int shiftCards(String[] arr, int start, String target) {
+        String s = arr[start];
+        int innerStart = start;
+        int left = 0;
+        int right = 0;
+        //  Right traverse
+        while (!s.equals(target)) {
+            if (innerStart == arr.length) {
+                innerStart = 0;
+            }
+            if (!arr[innerStart].equals(target)) {
+                innerStart++;
+                right++;
+            }
+            else {
+                s = target;
+            }
+        }
+        innerStart = start;
+        s = arr[start];
+        // Left traverse
+        while (!s.equals(target)) {
+            if (innerStart < 0) {
+                innerStart = arr.length - 1;
+            }
+            if (!arr[innerStart].equals(target)) {
+                innerStart--;
+                left++;
+            }
+            else {
+                s = target;
+            }
+        }
+        return Math.min(right, left);
+    }
+    // 3
+    public static int processorTime(int[] p, int[] t) {
+        Arrays.sort(p);
+        Arrays.sort(t);
+        int innerFor = t.length - 1;
+        int max = 0;
+        int calcMax = 0;
+        for (int i = 0; i < p.length; i++) {
+            int count = 0;
+            for (int j = innerFor; j >= 0 ; j--) {
+                calcMax = Math.max(calcMax, p[i] + t[j]);
+                count++;
+                if (count == 4) {
+                    innerFor = j - 1;
+                    break;
+                }
+            }
+        }
+        return Math.max(max, calcMax);
+    }
+}
