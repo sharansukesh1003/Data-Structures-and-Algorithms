@@ -4,11 +4,9 @@ import java.util.Arrays;
 
 public class InfosysQuestions {
     public static void main(String[] args) {
-//        System.out.println(characterRepeat("statistics"));
-//        System.out.println(shiftCards(new String[] {"red", "blue", "green", "yellow"}, 1, "yellow"));
-        int[] a = {8, 10};
-        int[] b = {3, 1, 8, 7, 4, 2, 5, 2};
-        System.out.println(processorTime(a, b));
+        System.out.println(characterRepeat("statistics"));
+        System.out.println(shiftCards(new String[] {"red", "blue", "green", "yellow"}, 1, "yellow"));
+        System.out.println(processorTime(new int[] {8, 10}, new int[] {3, 1, 8, 7, 4, 2, 5, 2}));
     }
     // 1
     public static int characterRepeat(String s){
@@ -77,6 +75,7 @@ public class InfosysQuestions {
                     innerFor = j - 1;
                     break;
                 }
+
             }
         }
         return Math.max(max, calcMax);
