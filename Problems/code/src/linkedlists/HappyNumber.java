@@ -1,7 +1,6 @@
 // https://leetcode.com/problems/happy-number/
 package linkedlists;
-// 100% Faster using linked list cycle detection algorithm.
-
+// 100% Faster using linked-list cycle detection algorithm.
 public class HappyNumber {
     public boolean isHappy(int n) {
         int fast = n;
