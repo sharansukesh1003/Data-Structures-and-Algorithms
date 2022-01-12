@@ -1,12 +1,15 @@
 // Infosys questions
 package com.sharan;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class InfosysQuestions {
     public static void main(String[] args) {
         System.out.println(characterRepeat("statistics"));
         System.out.println(shiftCards(new String[] {"red", "blue", "green", "yellow"}, 1, "yellow"));
         System.out.println(processorTime(new int[] {8, 10}, new int[] {3, 1, 8, 7, 4, 2, 5, 2}));
+        System.out.println(beautifulSubsequence("dsaddd"));
     }
     // 1
     public static int characterRepeat(String s){
@@ -79,5 +82,26 @@ public class InfosysQuestions {
             }
         }
         return Math.max(max, calcMax);
+    }
+    // 4
+    public static int beautifulSubsequence (String s) {
+        Set<String> ans = new HashSet<>();
+        int j = 0;
+        for (int i = 0; i < s.length(); i++) {
+            j++;
+            if (j + 1 > s.length()) {
+                j = 0;
+                String temp2 = s.substring(j+1 , i);
+                ans.add(temp2);
+                return ans.size();
+            }
+            String temp = s.substring(0 , i) + s.substring(j + 1);
+            if (!temp.isEmpty()) {
+                ans.add(temp);
+            }
+            temp = "";
+        }
+        System.out.println(ans);
+        return ans.size();
     }
 }

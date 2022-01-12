@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AddArrayInteger {
     public static void main(String[] args) {
-        int[] arr = {9,9,9};
+        int[] arr = {9, 9, 9};
         int k = 1;
         System.out.println(addToArrayForm(arr,k));
     }
